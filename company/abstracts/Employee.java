@@ -1,4 +1,5 @@
 package company.abstracts;
+
 import company.interfaces.Employable;
 
 public abstract class Employee implements Employable {
@@ -35,5 +36,17 @@ public abstract class Employee implements Employable {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Employee employee = (Employee) obj;
+        return id == employee.id;
     }
 }
