@@ -11,19 +11,19 @@ public class Main {
         Worker worker3 = new Worker("Michał", 4600.0, 2, "2020-03-01", "Rececjonista");
         Manager manager1 = new Manager("Jan", 8000.0, 5, "2014-01-01", "Dyrektor");
 
-        // Lista pracowników
+        
         List<Employee> employees = new ArrayList<>();
         employees.add(worker1);
         employees.add(worker2);
         employees.add(worker3);
         employees.add(manager1);
 
-        // Wyświetlanie kodów hash
+        
         for (Employee employee : employees) {
             System.out.println(employee.getName() + " has code: " + employee.hashCode());
         }
 
-        // Porównywanie obiektów za pomocą metody equals
+        
         for (Employee employee : employees) {
             System.out.println("Comparing Marek with " + employee.getName());
             if (!employee.equals(worker2)) {
