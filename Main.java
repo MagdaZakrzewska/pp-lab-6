@@ -27,12 +27,12 @@ public class Main {
         employees.add(manager2);
         employees.add(manager3);
 
-        // Wyświetlanie kodów hash
+        
         for (Employee employee : employees) {
             System.out.println(employee.getName() + " has code: " + employee.hashCode());
         }
 
-        // Porównywanie obiektów za pomocą metody equals
+        
         for (Employee employee : employees) {
             System.out.println("Comparing Marek with " + employee.getName());
             if (!employee.equals(worker2)) {
@@ -42,7 +42,7 @@ public class Main {
             }
         }
 
-        // Zliczanie sumy pensji wszystkich pracowników
+        
         double totalSalary = 0;
         double totalManagerSalary = 0;
         double totalWorkerSalary = 0;
@@ -60,7 +60,7 @@ public class Main {
         System.out.println("Total salary of all managers: " + totalManagerSalary);
         System.out.println("Total salary of all workers: " + totalWorkerSalary);
 
-        // Wyszukiwanie duplikatów na podstawie ID
+        
         Map<Integer, List<Employee>> duplicatesMap = new HashMap<>();
         for (Employee employee : employees) {
             int id = employee.hashCode();
